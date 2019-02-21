@@ -1,7 +1,7 @@
-package org.cbioportal.genome_nexus.service.mock;
+package org.cbioportal.genome_nexus.component.test.mock;
 
 import org.cbioportal.genome_nexus.model.IsoformOverride;
-import org.cbioportal.genome_nexus.service.MockData;
+import org.cbioportal.genome_nexus.component.test.MockData;
 
 import java.util.HashMap;
 import java.util.Map;

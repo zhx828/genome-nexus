@@ -1,8 +1,7 @@
-package org.cbioportal.genome_nexus.service.mock;
+package org.cbioportal.genome_nexus.component.test.mock;
 
 import org.cbioportal.genome_nexus.model.Hotspot;
-import org.cbioportal.genome_nexus.model.IntegerRange;
-import org.cbioportal.genome_nexus.service.MockData;
+import org.cbioportal.genome_nexus.component.test.MockData;
 
 import java.util.ArrayList;
 import java.util.HashMap;

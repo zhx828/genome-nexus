@@ -5,14 +5,14 @@ import static org.junit.Assert.assertEquals;
 import java.io.IOException;
 import java.util.Map;
 
+import org.cbioportal.genome_nexus.component.test.mock.VariantAnnotationMockData;
 import org.cbioportal.genome_nexus.model.my_variant_info_model.MyVariantInfo;
 import org.cbioportal.genome_nexus.model.VariantAnnotation;
 import org.cbioportal.genome_nexus.service.cached.CachedMyVariantInfoFetcher;
 import org.cbioportal.genome_nexus.service.exception.MyVariantInfoNotFoundException;
 import org.cbioportal.genome_nexus.service.exception.MyVariantInfoWebServiceException;
 import org.cbioportal.genome_nexus.service.exception.ResourceMappingException;
-import org.cbioportal.genome_nexus.service.mock.MyVariantInfoMockData;
-import org.cbioportal.genome_nexus.service.mock.VariantAnnotationMockData;
+import org.cbioportal.genome_nexus.component.test.mock.MyVariantInfoMockData;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;

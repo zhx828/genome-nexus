@@ -1,6 +1,10 @@
 package org.cbioportal.genome_nexus.service.annotation;
 
-import org.cbioportal.genome_nexus.model.EnsemblCanonical;
+import org.cbioportal.genome_nexus.component.annotation.CanonicalTranscriptResolver;
+import org.cbioportal.genome_nexus.component.test.mock.CanonicalTranscriptResolverMocker;
+import org.cbioportal.genome_nexus.component.test.mock.GeneXrefMockData;
+import org.cbioportal.genome_nexus.component.test.mock.GeneXrefServiceMocker;
+import org.cbioportal.genome_nexus.component.test.mock.VariantAnnotationMockData;
 import org.cbioportal.genome_nexus.model.EnsemblGene;
 import org.cbioportal.genome_nexus.model.GeneXref;
 import org.cbioportal.genome_nexus.model.VariantAnnotation;
@@ -8,7 +12,7 @@ import org.cbioportal.genome_nexus.service.EnsemblService;
 import org.cbioportal.genome_nexus.service.GeneXrefService;
 import org.cbioportal.genome_nexus.service.exception.EnsemblWebServiceException;
 import org.cbioportal.genome_nexus.service.exception.NoEnsemblGeneIdForHugoSymbolException;
-import org.cbioportal.genome_nexus.service.mock.*;
+import org.cbioportal.genome_nexus.component.test.mock.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;

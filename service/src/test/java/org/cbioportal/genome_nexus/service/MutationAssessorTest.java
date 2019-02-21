@@ -3,7 +3,7 @@ package org.cbioportal.genome_nexus.service;
 import com.mongodb.BasicDBObject;
 import org.cbioportal.genome_nexus.model.MutationAssessor;
 import org.cbioportal.genome_nexus.service.cached.CachedMutationAssessorFetcher;
-import org.cbioportal.genome_nexus.service.config.ExternalResourceObjectMapper;
+import org.cbioportal.genome_nexus.component.config.ExternalResourceObjectMapper;
 import org.cbioportal.genome_nexus.service.exception.ResourceMappingException;
 import org.cbioportal.genome_nexus.service.exception.MutationAssessorNotFoundException;
 import org.cbioportal.genome_nexus.service.exception.MutationAssessorWebServiceException;

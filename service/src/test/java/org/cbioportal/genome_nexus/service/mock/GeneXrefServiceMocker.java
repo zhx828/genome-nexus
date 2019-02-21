@@ -1,4 +1,4 @@
-package org.cbioportal.genome_nexus.service.mock;
+package org.cbioportal.genome_nexus.component.test.mock;
 
 import org.cbioportal.genome_nexus.model.GeneXref;
 import org.cbioportal.genome_nexus.service.GeneXrefService;
