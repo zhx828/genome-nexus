@@ -32,6 +32,10 @@
 
 package org.cbioportal.genome_nexus;
 
+import com.google.auth.oauth2.GoogleCredentials;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
+import com.google.firebase.auth.FirebaseAuth;
 import org.cbioportal.genome_nexus.web.config.ApiObjectMapper;
 import org.cbioportal.genome_nexus.web.config.InternalApi;
 import org.cbioportal.genome_nexus.web.config.PublicApi;
@@ -49,6 +53,8 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Arrays;
 import java.util.HashSet;
 
@@ -97,6 +103,23 @@ public class GenomeNexusAnnotation extends SpringBootServletInitializer
     @Bean
     public MappingJackson2HttpMessageConverter messageConverter() {
         return new MappingJackson2HttpMessageConverter(new ApiObjectMapper());
+    }
+
+    @Bean
+    public FirebaseAuth firebaseAuth() throws IOException {
+        if (FirebaseApp.getApps().size() == 0) {
+            System.out.println("MvcConfigurationPrivate invoked");
+            InputStream refreshToken = this.getClass().getClassLoader().getResourceAsStream("certificate/dev-oncokb-hx-firebase-adminsdk-50w75-73f2c6e914.json");
+            FirebaseOptions options = new FirebaseOptions.Builder()
+                .setCredentials(GoogleCredentials.fromStream(refreshToken))
+                .setDatabaseUrl("https://dev-oncokb-hx.firebaseio.com/")
+                .build();
+
+            FirebaseApp.initializeApp(options);
+
+            FirebaseAuth.getInstance();
+        }
+        return FirebaseAuth.getInstance();
     }
 
     private ApiInfo apiInfo() {
