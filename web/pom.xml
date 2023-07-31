@@ -57,6 +57,10 @@
       <artifactId>spring-boot-starter-tomcat</artifactId>
       <scope>provided</scope>
       </dependency>
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-thymeleaf</artifactId>
+      </dependency>
     <dependency>
       <groupId>io.springfox</groupId>
       <artifactId>springfox-swagger2</artifactId>
@@ -100,9 +104,9 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>com.github.genome-nexus</groupId>
+                  <groupId>com.github.zhx828</groupId>
                   <artifactId>genome-nexus-frontend</artifactId>
-                  <version>ef5315c</version>
+                  <version>98a6de087e</version>
                   <type>jar</type>
                   <outputDirectory>src/main/resources/static</outputDirectory>
                   <overWrite>true</overWrite>

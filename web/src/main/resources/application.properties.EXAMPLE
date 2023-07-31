@@ -64,6 +64,7 @@ server.max-http-header-size=10000000
 management.info.git.mode=full
 
 # oncokb
+oncokb.enabled=false
 oncokb.url=https://www.oncokb.org/api/v1/annotate/mutations/byProteinChange?PROTEINCHANGE
 
 # For testing use same embeded mongo version as genome-nexus-importer
